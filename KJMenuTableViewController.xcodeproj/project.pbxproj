@@ -88,19 +88,8 @@
 		4E2CB14913E5C905003208B9 /* KJMenuTableViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4E2CB15213E5C905003208B9 /* KJMenuTableViewControllerAppDelegate.h */,
-				4E2CB15313E5C905003208B9 /* KJMenuTableViewControllerAppDelegate.m */,
-				4E2CB15513E5C905003208B9 /* MainWindow.xib */,
-				4E2CB15813E5C905003208B9 /* RootViewController.h */,
-				4E2CB15913E5C905003208B9 /* RootViewController.m */,
-				4E2CB15B13E5C905003208B9 /* RootViewController.xib */,
-				4E2CB14A13E5C905003208B9 /* Supporting Files */,
-				4E2CB16313E5C91E003208B9 /* KJMenuTableViewController.h */,
-				4E2CB16413E5C91E003208B9 /* KJMenuTableViewController.m */,
-				4E2CB16613E5CC4B003208B9 /* KJMenuSection.h */,
-				4E2CB16713E5CC4B003208B9 /* KJMenuSection.m */,
-				4E2CB16913E5D0BE003208B9 /* KJMenuItem.h */,
-				4E2CB16A13E5D0BE003208B9 /* KJMenuItem.m */,
+				4E2CB16D13E5F419003208B9 /* KJMenuTableViewController */,
+				4E2CB16C13E5F3F1003208B9 /* Demo Application */,
 			);
 			path = KJMenuTableViewController;
 			sourceTree = "<group>";
@@ -114,6 +103,33 @@
 				4E2CB15113E5C905003208B9 /* KJMenuTableViewController-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4E2CB16C13E5F3F1003208B9 /* Demo Application */ = {
+			isa = PBXGroup;
+			children = (
+				4E2CB14A13E5C905003208B9 /* Supporting Files */,
+				4E2CB15213E5C905003208B9 /* KJMenuTableViewControllerAppDelegate.h */,
+				4E2CB15313E5C905003208B9 /* KJMenuTableViewControllerAppDelegate.m */,
+				4E2CB15513E5C905003208B9 /* MainWindow.xib */,
+				4E2CB15813E5C905003208B9 /* RootViewController.h */,
+				4E2CB15913E5C905003208B9 /* RootViewController.m */,
+				4E2CB15B13E5C905003208B9 /* RootViewController.xib */,
+			);
+			name = "Demo Application";
+			sourceTree = "<group>";
+		};
+		4E2CB16D13E5F419003208B9 /* KJMenuTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4E2CB16313E5C91E003208B9 /* KJMenuTableViewController.h */,
+				4E2CB16413E5C91E003208B9 /* KJMenuTableViewController.m */,
+				4E2CB16613E5CC4B003208B9 /* KJMenuSection.h */,
+				4E2CB16713E5CC4B003208B9 /* KJMenuSection.m */,
+				4E2CB16913E5D0BE003208B9 /* KJMenuItem.h */,
+				4E2CB16A13E5D0BE003208B9 /* KJMenuItem.m */,
+			);
+			name = KJMenuTableViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
