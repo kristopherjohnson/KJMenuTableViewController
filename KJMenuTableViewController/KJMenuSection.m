@@ -1,5 +1,5 @@
 //
-//  RootViewController.h
+//  KJMenuSection.m
 //  KJMenuTableViewController
 //
 // Copyright (C) 2011 Kristopher Johnson
@@ -22,9 +22,62 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
-#import "KJMenuTableViewController.h"
+#import "KJMenuSection.h"
 
-@interface RootViewController : KJMenuTableViewController
+@implementation KJMenuSection
+
+@synthesize headerTitle;
+@synthesize footerTitle;
+
++ (KJMenuSection *)sectionWithHeaderTitle:(NSString *)headerTitle {
+    KJMenuSection *section = [[[KJMenuSection alloc] init] autorelease];
+    section.headerTitle = headerTitle;
+    return section;
+}
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        _items = [[NSMutableArray array] retain];
+    }
+    
+    return self;
+}
+
+- (void)dealloc {
+    self.headerTitle = nil;
+    self.footerTitle = nil;
+    [_items release];
+    [super dealloc];
+}
+
+- (NSUInteger)itemCount {
+    return [_items count];
+}
+
+- (KJMenuItem *)itemAtIndex:(NSUInteger)index {
+    return [_items objectAtIndex:index];
+}
+
+- (void)addItem:(KJMenuItem *)item {
+    [_items addObject:item];
+}
+
+- (void)insertItem:(KJMenuItem *)item atIndex:(NSUInteger)index {
+    [_items insertObject:item atIndex:index];
+}
+
+- (void)removeItemAtIndex:(NSUInteger)index {
+    [_items removeObjectAtIndex:index];
+}
+
+- (void)removeItem:(KJMenuItem *)item {
+    [_items removeObject:item];
+}
+
+- (void)removeAllItems {
+    [_items removeAllObjects];
+}
 
 @end

@@ -16,6 +16,9 @@
 		4E2CB15713E5C905003208B9 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E2CB15513E5C905003208B9 /* MainWindow.xib */; };
 		4E2CB15A13E5C905003208B9 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2CB15913E5C905003208B9 /* RootViewController.m */; };
 		4E2CB15D13E5C905003208B9 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E2CB15B13E5C905003208B9 /* RootViewController.xib */; };
+		4E2CB16513E5C91E003208B9 /* KJMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2CB16413E5C91E003208B9 /* KJMenuTableViewController.m */; };
+		4E2CB16813E5CC4B003208B9 /* KJMenuSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2CB16713E5CC4B003208B9 /* KJMenuSection.m */; };
+		4E2CB16B13E5D0BE003208B9 /* KJMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2CB16A13E5D0BE003208B9 /* KJMenuItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,16 +26,22 @@
 		4E2CB14313E5C905003208B9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4E2CB14513E5C905003208B9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4E2CB14713E5C905003208B9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		4E2CB14B13E5C905003208B9 /* KJMenuTableViewController-Info.plist */ = {isa = PBXFileReference; path = "KJMenuTableViewController-Info.plist"; sourceTree = "<group>"; };
+		4E2CB14B13E5C905003208B9 /* KJMenuTableViewController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KJMenuTableViewController-Info.plist"; sourceTree = "<group>"; };
 		4E2CB14D13E5C905003208B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4E2CB14F13E5C905003208B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4E2CB15113E5C905003208B9 /* KJMenuTableViewController-Prefix.pch */ = {isa = PBXFileReference; path = "KJMenuTableViewController-Prefix.pch"; sourceTree = "<group>"; };
-		4E2CB15213E5C905003208B9 /* KJMenuTableViewControllerAppDelegate.h */ = {isa = PBXFileReference; path = KJMenuTableViewControllerAppDelegate.h; sourceTree = "<group>"; };
+		4E2CB15113E5C905003208B9 /* KJMenuTableViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KJMenuTableViewController-Prefix.pch"; sourceTree = "<group>"; };
+		4E2CB15213E5C905003208B9 /* KJMenuTableViewControllerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJMenuTableViewControllerAppDelegate.h; sourceTree = "<group>"; };
 		4E2CB15313E5C905003208B9 /* KJMenuTableViewControllerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJMenuTableViewControllerAppDelegate.m; sourceTree = "<group>"; };
 		4E2CB15613E5C905003208B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		4E2CB15813E5C905003208B9 /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		4E2CB15813E5C905003208B9 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		4E2CB15913E5C905003208B9 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		4E2CB15C13E5C905003208B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		4E2CB16313E5C91E003208B9 /* KJMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJMenuTableViewController.h; sourceTree = "<group>"; };
+		4E2CB16413E5C91E003208B9 /* KJMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJMenuTableViewController.m; sourceTree = "<group>"; };
+		4E2CB16613E5CC4B003208B9 /* KJMenuSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJMenuSection.h; sourceTree = "<group>"; };
+		4E2CB16713E5CC4B003208B9 /* KJMenuSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJMenuSection.m; sourceTree = "<group>"; };
+		4E2CB16913E5D0BE003208B9 /* KJMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJMenuItem.h; sourceTree = "<group>"; };
+		4E2CB16A13E5D0BE003208B9 /* KJMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJMenuItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +95,12 @@
 				4E2CB15913E5C905003208B9 /* RootViewController.m */,
 				4E2CB15B13E5C905003208B9 /* RootViewController.xib */,
 				4E2CB14A13E5C905003208B9 /* Supporting Files */,
+				4E2CB16313E5C91E003208B9 /* KJMenuTableViewController.h */,
+				4E2CB16413E5C91E003208B9 /* KJMenuTableViewController.m */,
+				4E2CB16613E5CC4B003208B9 /* KJMenuSection.h */,
+				4E2CB16713E5CC4B003208B9 /* KJMenuSection.m */,
+				4E2CB16913E5D0BE003208B9 /* KJMenuItem.h */,
+				4E2CB16A13E5D0BE003208B9 /* KJMenuItem.m */,
 			);
 			path = KJMenuTableViewController;
 			sourceTree = "<group>";
@@ -167,6 +182,9 @@
 				4E2CB15013E5C905003208B9 /* main.m in Sources */,
 				4E2CB15413E5C905003208B9 /* KJMenuTableViewControllerAppDelegate.m in Sources */,
 				4E2CB15A13E5C905003208B9 /* RootViewController.m in Sources */,
+				4E2CB16513E5C91E003208B9 /* KJMenuTableViewController.m in Sources */,
+				4E2CB16813E5CC4B003208B9 /* KJMenuSection.m in Sources */,
+				4E2CB16B13E5D0BE003208B9 /* KJMenuItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

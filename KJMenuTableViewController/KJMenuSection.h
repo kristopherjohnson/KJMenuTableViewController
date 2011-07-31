@@ -1,5 +1,5 @@
 //
-//  RootViewController.h
+//  KJMenuSection.h
 //  KJMenuTableViewController
 //
 // Copyright (C) 2011 Kristopher Johnson
@@ -22,9 +22,42 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
-#import "KJMenuTableViewController.h"
+#import <Foundation/Foundation.h>
+#import "KJMenuItem.h"
 
-@interface RootViewController : KJMenuTableViewController
+// Section header and footer text and a collection of KJMenuItems
+@interface KJMenuSection : NSObject {
+    NSMutableArray *_items;
+}
+
+// Title text to be shown at the top of the section
+@property (nonatomic, copy) NSString *headerTitle;
+
+// Footer text to be shown at the bottom of the section
+@property (nonatomic, copy) NSString *footerTitle;
+
+// Number of items in section
+@property (nonatomic, readonly) NSUInteger itemCount;
+
+// Return an autoreleased KJMenuSection with specified title
++ (KJMenuSection *)sectionWithHeaderTitle:(NSString *)headerTitle;
+
+// Return the item at the specfied index
+- (KJMenuItem *)itemAtIndex:(NSUInteger)index;
+
+// Add an item to the end of the collection
+- (void)addItem:(KJMenuItem *)item;
+
+// Insert an item at the specified index
+- (void)insertItem:(KJMenuItem *)item atIndex:(NSUInteger)index;
+
+// Remove the item at the specified index
+- (void)removeItemAtIndex:(NSUInteger)index;
+
+// Remove specified item from the collection
+- (void)removeItem:(KJMenuItem *)item;
+
+// Remove all items from the collection
+- (void)removeAllItems;
 
 @end
