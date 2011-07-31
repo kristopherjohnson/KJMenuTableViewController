@@ -25,7 +25,9 @@
 #import <Foundation/Foundation.h>
 #import "KJMenuItem.h"
 
-// Section header and footer text and a collection of KJMenuItems
+// Section header and footer text and a collection of KJMenuItems, for use
+// with KJMenuTableViewController
+
 @interface KJMenuSection : NSObject {
     NSMutableArray *_items;
 }

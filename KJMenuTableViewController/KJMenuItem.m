@@ -62,7 +62,7 @@
 {
     self = [super init];
     if (self) {
-        autoDeselectAfterSelect = TRUE;
+        autoDeselectAfterSelect = YES;
         indentationWidth = 10.0;
     }
     

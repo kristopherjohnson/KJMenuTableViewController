@@ -25,6 +25,7 @@
 #import <UIKit/UIKit.h>
 #import "KJMenuSection.h"
 
+// UITableViewController subclass that supports easily adding tappable "menu items".
 @interface KJMenuTableViewController : UITableViewController {
 @private
     NSMutableArray *_sections;

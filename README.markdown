@@ -76,8 +76,10 @@ an item that pushes a new controller onto the navigation stack.
 The following features are planned:
 
 * Add convenience methods to reduce the verbosity of setting up a menu.
+* Make it possible to add/remove menu items and change their attributes after menu has already been displayed. (As-is, you need to call the table view's `reloadData` method if you change anything after `viewDidLoad`.)
 * Provide a mechanism so that only one item within a section has a checkmark, and when user selects another item the originally checked item is unchecked.
 * Provide the ability to define a menu hierarchy that is handled by a single view controller.
+* Add support for compilation with ARC
 
 ## License
 

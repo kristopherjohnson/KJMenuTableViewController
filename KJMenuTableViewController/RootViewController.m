@@ -87,6 +87,7 @@
         RootViewController *subcontroller = [[RootViewController alloc]
                                              initWithNibName:@"RootViewController" bundle:nil];
         [inv.controller.navigationController pushViewController:subcontroller animated:YES];
+        [subcontroller release];
     };
     [section addItem:item];
 }
@@ -107,6 +108,7 @@
                                            cancelButtonTitle:@"OK"
                                            otherButtonTitles:nil];
     [alert show];
+    [alert release];
 }
 
 @end
