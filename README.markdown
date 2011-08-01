@@ -1,9 +1,9 @@
-# KJMenuTableViewController
+# KJMenuTableViewController Library
 
 ## Overview
 
-KJMenuTableViewController is a set of classes that simplifies the creation of "menus" in
-iOS applications using `UITableViewController`.
+KJMenuTableViewController is an Xcode project that contains set of classes that simplifies the
+creation of "menus" in iOS applications using `UITableViewController`.
 
 The `UITableViewController` class is a generic mechanism for presenting a scrollable list of
 rows of items.  It is powerful and extensible, but it can be a chore to present a simple
@@ -11,20 +11,34 @@ list of button-like objects that react when tapped.  One must provide implementa
 methods of the `UITableViewDataSource` and `UITableViewDelegate` classes, each of which will
 probably have a `case` statement to handle each of the individual items.
 
-The KJMenuTableViewController simplifies this usage case.  One simply defines a subclass of
-KJMenuTableViewController and overrides the `viewDidLoad` method to create sections and row items.
-The actions to be executed when an item is tapped are defined as blocks, so there is no need
-to define extra methods in the controller class or in other classes.
+The KJMenuTableViewController classes simplify this usage case.  One simply defines a subclass of
+`KJMenuTableViewController` and overrides the `viewDidLoad` method to create sections and row items.
+`KJMenuTableViewController` implements the table view delegate and data source methods to
+appropriately display the sections and rows, and will take action when a row is tapped.
 
+The code to be executed when an item is tapped are written as a block.
 When the block is invoked, a `KJMenuItemInvocation` structure is passed to it. This structure
 contains pointers to the menu item, cell, and controller, so there is no reason for the block
-to retain any of these objects.
+to retain any of these objects itself.  (Beware of retain cycles if the block _does_ reference
+the menu item, cell, or controller.)
+
+## Usage
+
+Someday, this will be a proper library, but right now the library is distributed as a demo
+application that contains reusable classes.
+
+To make use of the reusable classes, copy the following source files from the demo project into
+your own application:
+
+* `KJMenuTableViewController.h` and `KJMenuTableViewController.m`
+* `KJMenuSection.h` and `KJMenuSection.m`
+* `KJMenuItem.h` and `KJMenuItem.m`
 
 ## Example
 
-In this example, the controller is a subclass of `KJMenuTableViewController`, which is itself
+In this example snippet, the controller is a subclass of `KJMenuTableViewController`, which is itself
 a subclass of `UITableViewController`.  In the `viewDidLoad` method, we add a first section with
-two items, each of which displays itself in an alert box, and a second section that has
+two items, each of which displays its text in an alert box, and a second section that has
 an item that pushes a new controller onto the navigation stack.
 
     - (void)viewDidLoad {
