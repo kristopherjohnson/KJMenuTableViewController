@@ -3,11 +3,11 @@
 ## Overview
 
 KJMenuTableViewController is a set of classes that simplifies the creation of "menus" in
-iOS application using `UITableViewController`.
+iOS applications using `UITableViewController`.
 
 The `UITableViewController` class is a generic mechanism for presenting a scrollable list of
 rows of items.  It is powerful and extensible, but it can be a chore to present a simple
-list of button-like rows that react when tapped.  One must provide implementations of several
+list of button-like objects that react when tapped.  One must provide implementations of several
 methods of the `UITableViewDataSource` and `UITableViewDelegate` classes, each of which will
 probably have a `case` statement to handle each of the individual items.
 
@@ -15,6 +15,10 @@ The KJMenuTableViewController simplifies this usage case.  One simply defines a 
 KJMenuTableViewController and overrides the `viewDidLoad` method to create sections and row items.
 The actions to be executed when an item is tapped are defined as blocks, so there is no need
 to define extra methods in the controller class or in other classes.
+
+When the block is invoked, a `KJMenuItemInvocation` structure is passed to it. This structure
+contains pointers to the menu item, cell, and controller, so there is no reason for the block
+to retain any of these objects.
 
 ## Example
 
@@ -63,13 +67,14 @@ an item that pushes a new controller onto the navigation stack.
                            accessoryType:UITableViewCellAccessoryDisclosureIndicator];
         item.autoDeselectAfterSelect = NO;
         item.block = ^(KJMenuItemInvocation inv) {
-            RootViewController *subcontroller = [[RootViewController alloc]
-                                                 initWithNibName:@"RootViewController" bundle:nil];
+            MyViewController *subcontroller = [[MyViewController alloc]
+                                               initWithNibName:@"MyViewController" bundle:nil];
             [inv.controller.navigationController pushViewController:subcontroller animated:YES];
         };
         [section addItem:item];
     }
 
+For a complete example, see the demo application's [RootViewController.m](https://github.com/kristopherjohnson/KJMenuTableViewController/blob/master/KJMenuTableViewController/RootViewController.m).
 
 ## Future Directions
 
@@ -79,7 +84,7 @@ The following features are planned:
 * Make it possible to add/remove menu items and change their attributes after menu has already been displayed. (As-is, you need to call the table view's `reloadData` method if you change anything after `viewDidLoad`.)
 * Provide a mechanism so that only one item within a section has a checkmark, and when user selects another item the originally checked item is unchecked.
 * Provide the ability to define a menu hierarchy that is handled by a single view controller.
-* Add support for compilation with ARC
+* Add support for compilation with ARC enabled
 
 ## License
 
